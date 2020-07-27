@@ -4698,7 +4698,7 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 .s-contact {
     background-color: var(--color-1);
-    padding-top: calc(6 * var(--space));
+    padding-top: calc(2 * var(--space));
     padding-bottom: var(--vspace-2);
 }
 
@@ -4758,7 +4758,7 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 .s-footer {
     padding-top: var(--vspace-2);
-    padding-bottom: var(--vspace-4);
+    padding-bottom: var(--vspace-1);
     color: white;
 }
 
