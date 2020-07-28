@@ -4878,14 +4878,14 @@ html.no-csstransitions .s-hero__content {
 }
 
 .testimonial-slider p {
-    font-size: var(--text-lg);
+    font-size: var(--text-md);
     line-height: 1.852;
     color: white;
 }
 
 .testimonial-slider__slide {
     position: relative;
-    padding: 0 var(--gutter-lg);
+    padding: 0 var(--gutter-l);
 }
 
 .testimonial-slider__author {
@@ -4976,7 +4976,7 @@ html.no-csstransitions .s-hero__content {
     }
 
     .testimonial-slider p {
-        font-size: var(--text-md);
+        font-size: var(--text-sm);
     }
 
     .testimonial-slider__author {
@@ -5020,15 +5020,13 @@ html.no-csstransitions .s-hero__content {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-    background: #D31027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background-color: var(--color-1);
     padding-top: calc(2 * var(--space));
     padding-bottom: var(--vspace-2);
 }
 
 .s-contact__top .h6 {
+    color: black;
     margin-top: 0;
     margin-bottom: var(--vspace-1);
 }
@@ -5092,7 +5090,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 .s-footer .h6 {
-    color: #eee;
+    color: black;
     margin-top: 0;
 }
 
@@ -5514,9 +5512,3 @@ html.no-csstransitions .s-hero__content {
   }
 
 /* The Big Animation Sphere Starting */
-
-/* Changing The Footer Colour */
-
-.s-footer{
-    background-color: #000000;
-}
