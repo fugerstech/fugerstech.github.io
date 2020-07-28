@@ -4544,7 +4544,7 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 .s-portfolio {
     background-color: var(--color-bg);
-    padding-top: calc(7 * var(--space));
+    padding-top: calc(2 * var(--space));
     padding-bottom: 0;
 }
 
@@ -4554,7 +4554,7 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 .s-portfolio__list {
     max-width: calc(var(--width-max) + 40px);
-    padding-top: var(--vspace-1_5);
+    padding-top: var(--vspace-1_1);
 }
 
 .folio-item {
