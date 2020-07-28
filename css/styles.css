@@ -5440,7 +5440,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 .pricing-features {
-    color: #016FF9;
+    color: #000000;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 50px 0 25px;
@@ -5453,7 +5453,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 .pricing-price {
-    color: #016FF9;
+    color: #d41229;
     display: block;
     font-size: 32px;
     font-weight: 700;
