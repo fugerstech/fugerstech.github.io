@@ -5327,6 +5327,7 @@ html.no-csstransitions .s-hero__content {
     font-family: var(--font-1);
     color: #fc3735;
     background: -webkit-linear-gradient(left, #F57170, #10DDC2, #F57170);
+    padding-bottom: 10px;
     background-size: 1600px 200px;
     background-clip: text;
     -webkit-background-clip: text;
