@@ -2926,7 +2926,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 {
-    font-size: var(--text-xxl);
+    font-size: var(--text-xl);
     font-weight: 500;
     line-height: var(--vspace-1_75);
     margin-top: 0;
@@ -4740,7 +4740,7 @@ html.no-csstransitions .s-hero__content {
 
 @media screen and (max-width: 1200px) {
     .s-contact__email {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 }
 
