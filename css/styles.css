@@ -5474,7 +5474,7 @@ html.no-csstransitions .s-hero__content {
   }
 
 
-  /* Sphere Animation */
+/* The Big Animation Sphere Starting */
   .ball-sphere {
     display: flex;
     justify-content: center;
@@ -5510,3 +5510,5 @@ html.no-csstransitions .s-hero__content {
       stroke-width: .4px;
     }
   }
+
+/* The Big Animation Sphere Starting */
