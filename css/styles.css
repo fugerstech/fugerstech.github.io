@@ -5034,7 +5034,7 @@ html.no-csstransitions .s-hero__content {
 .s-contact__email {
     margin-top: var(--vspace-1_5);
     font-family: var(--font-2);
-    font-size: calc(var(--text-size) * 6.6);
+    font-size: calc(var(--text-size) * 2);
     font-weight: 500;
     letter-spacing: -0.01em;
     line-height: 1;
@@ -5057,7 +5057,7 @@ html.no-csstransitions .s-hero__content {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1600px) {
     .s-contact__email {
-        font-size: calc(var(--text-size) * 6);
+        font-size: calc(var(--text-size) * 4);
     }
 }
 
@@ -5069,7 +5069,7 @@ html.no-csstransitions .s-hero__content {
 
 @media screen and (max-width: 400px) {
     .s-contact {
-        padding-top: var(--vspace-4);
+        padding-top: var(--vspace-2);
     }
 }
 
