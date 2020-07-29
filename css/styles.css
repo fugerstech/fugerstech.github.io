@@ -5553,3 +5553,14 @@ html.no-csstransitions .s-hero__content {
         border: solid 1px #bfc1ce;
     }
 }
+
+/* Text Selection Styling */
+::selection {
+    background: #79fee0; /* WebKit/Blink Browsers */
+    color: white;
+  }
+  ::-moz-selection {
+    background: #79fee0; /* Gecko Browsers */
+    color: white;
+  }
+  
