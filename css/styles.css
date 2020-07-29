@@ -5358,7 +5358,6 @@ html.no-csstransitions .s-hero__content {
 
 
 
-
 /* Pricing Section */
 .background {
     padding: 0 25px 25px;
@@ -5393,6 +5392,15 @@ html.no-csstransitions .s-hero__content {
     box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
     display: flex;
     flex-direction: column;
+
+
+    border-radius: 42px;
+    background: linear-gradient(145deg, #d6e3ea, #e3e9ed);
+    box-shadow: 41px 41px 82px #000,
+        -41px -41px 82px #000;
+
+
+
 }
 
 @media (min-width: 900px) {
@@ -5529,19 +5537,19 @@ html.no-csstransitions .s-hero__content {
 
 @media (hover: hover) and (pointer: fine) {
     #cursor {
-      z-index: 99;
-      position: fixed;
-      left: 0;
-      top: 0;
-      pointer-events: none;
-      will-change: transform;
+        z-index: 99;
+        position: fixed;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        will-change: transform;
     }
-  
+
     #cursor .cursor--inner {
-      width: 4vw;
-      height: 4vw;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      border: solid 1px #bfc1ce;
+        width: 4vw;
+        height: 4vw;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 1px #bfc1ce;
     }
-  }
+}
