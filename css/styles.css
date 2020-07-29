@@ -3167,7 +3167,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 {
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     font-weight: 500;
     line-height: var(--vspace-1_75);
     margin-top: 0;
