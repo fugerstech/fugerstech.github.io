@@ -3167,7 +3167,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 {
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     font-weight: 500;
     line-height: var(--vspace-1_75);
     margin-top: 0;
@@ -5538,8 +5538,8 @@ html.no-csstransitions .s-hero__content {
     }
   
     #cursor .cursor--inner {
-      width: 5vw;
-      height: 5vw;
+      width: 4vw;
+      height: 4vw;
       border-radius: 50%;
       transform: translate(-50%, -50%);
       border: solid 1px #bfc1ce;
