@@ -5480,11 +5480,11 @@ html.no-csstransitions .s-hero__content {
 
 .pricing-button:hover,
 .pricing-button:focus {
-    background-color: #e1f1ff;
+    background-color: #000;
 }
 
 .pricing-button.is-featured {
-    background-color: #48aaff;
+    background: linear-gradient(to right, #EA384D, #D31027);
     color: #fff;
 }
 
