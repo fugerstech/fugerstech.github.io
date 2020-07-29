@@ -3176,7 +3176,7 @@ input::-moz-focus-inner {
 .item-title {
     font-family: var(--font-2);
     font-weight: 500;
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     line-height: var(--vspace-1_25);
     margin-top: 0;
     margin-bottom: var(--vspace-0_5);
