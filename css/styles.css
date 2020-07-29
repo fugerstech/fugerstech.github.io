@@ -5380,7 +5380,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 .panel {
-    background-color: #fffffe;
+    background-color: #14171B;
     border-radius: 10px;
     padding: 15px 25px;
     position: relative;
@@ -5395,7 +5395,7 @@ html.no-csstransitions .s-hero__content {
 
 
     border-radius: 42px;
-    background: linear-gradient(145deg, #d6e3ea, #e3e9ed);
+    background: linear-gradient(145deg, #333333, #333333);
     box-shadow: 41px 41px 82px #000,
         -41px -41px 82px #000;
 
@@ -5442,13 +5442,13 @@ html.no-csstransitions .s-hero__content {
 }
 
 .pricing-header {
-    color: #14171b;
+    color: #C0C0C0;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 .pricing-features {
-    color: #000000;
+    color: #C0C0C0;
     font-weight: 600;
     letter-spacing: 1px;
     margin: 50px 0 25px;
@@ -5461,16 +5461,16 @@ html.no-csstransitions .s-hero__content {
 }
 
 .pricing-price {
-    color: #d41229;
+    color: #C5B358;
     display: block;
     font-size: 32px;
     font-weight: 700;
 }
 
 .pricing-button {
-    border: 1px solid #9dd1ff;
+    border: 1px solid #C0C0C0;
     border-radius: 10px;
-    color: #348EFE;
+    color: #C0C0C0;
     display: inline-block;
     margin: 25px 0;
     padding: 15px 35px;
