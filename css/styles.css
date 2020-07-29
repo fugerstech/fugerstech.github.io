@@ -5415,7 +5415,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 .pricing-plan {
-    border-bottom: 1px solid #e1f1ff;
+    border-bottom: 1px solid #0405065c;
     padding: 25px;
 }
 
@@ -5426,7 +5426,7 @@ html.no-csstransitions .s-hero__content {
 @media (min-width: 900px) {
     .pricing-plan {
         border-bottom: none;
-        border-right: 1px solid #e1f1ff;
+        border-right: 1px solid#0a0c0e26;
         flex-basis: 100%;
         padding: 25px 50px;
     }
