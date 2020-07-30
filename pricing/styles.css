@@ -121,3 +121,6 @@ header {
     fill: #4a0b32;
   }
   
+  .page-cover-image{
+    border-radius: 10px;
+  }
