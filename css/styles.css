@@ -5598,3 +5598,9 @@ html.no-csstransitions .s-hero__content {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
+
+/* Rounding The Buttons */
+
+.border-round{
+    border-radius: 50px;
+}
