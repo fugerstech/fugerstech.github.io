@@ -3,14 +3,14 @@
  *
  * ------------------------------------------------------------------- */
 
-(function($) {
+(function ($) {
 
     "use strict";
-    
+
     const cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : ''   // mailchimp url
-                };
+        scrollDuration: 800, // smoothscroll duration
+        mailChimpURL: ''   // mailchimp url
+    };
     const $WIN = $(window);
 
 
@@ -20,23 +20,23 @@
     // doc.setAttribute('data-useragent', navigator.userAgent);
 
 
-   /* preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
+    /* preloader
+     * -------------------------------------------------- */
+    const ssPreloader = function () {
 
         $("html").addClass('ss-preload');
 
-        $WIN.on('load', function() {
+        $WIN.on('load', function () {
 
             // force page scroll position to top at page refresh
             $('html, body').animate({ scrollTop: 0 }, 'normal');
 
             // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
+            $("#loader").fadeOut("slow", function () {
                 // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
+            });
+
             // for hero content animations 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
@@ -46,24 +46,24 @@
 
 
 
-   /* pretty print
-    * -------------------------------------------------- */
-    const ssPrettyPrint = function() {
+    /* pretty print
+     * -------------------------------------------------- */
+    const ssPrettyPrint = function () {
         $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
+        $(document).ready(function () {
             prettyPrint();
         });
     };
 
 
 
-   /* move header
-    * -------------------------------------------------- */
+    /* move header
+     * -------------------------------------------------- */
     const ssMoveHeader = function () {
 
         const $hero = $('.s-hero'),
-              $hdr = $('.s-header'),
-              triggerHeight = $hero.outerHeight() - 170;
+            $hdr = $('.s-header'),
+            triggerHeight = $hero.outerHeight() - 170;
 
 
         $WIN.on('scroll', function () {
@@ -94,21 +94,21 @@
 
 
 
-   /* mobile menu
-    * ---------------------------------------------------- */ 
-    const ssMobileMenu = function() {
+    /* mobile menu
+     * ---------------------------------------------------- */
+    const ssMobileMenu = function () {
 
         const $toggleButton = $('.s-header__menu-toggle');
         const $headerContent = $('.s-header__content');
         const $siteBody = $("body");
 
-        $toggleButton.on('click', function(event){
+        $toggleButton.on('click', function (event) {
             event.preventDefault();
             $toggleButton.toggleClass('is-clicked');
             $siteBody.toggleClass('menu-is-open');
         });
 
-        $headerContent.find('.s-header__nav a, .btn').on("click", function() {
+        $headerContent.find('.s-header__nav a, .btn').on("click", function () {
 
             // at 900px and below
             if (window.matchMedia('(max-width: 900px)').matches) {
@@ -117,7 +117,7 @@
             }
         });
 
-        $WIN.on('resize', function() {
+        $WIN.on('resize', function () {
 
             // above 900px
             if (window.matchMedia('(min-width: 901px)').matches) {
@@ -130,31 +130,31 @@
 
 
 
-   /* photoswipe
-    * ----------------------------------------------------- */
-    const ssPhotoswipe = function() {
+    /* photoswipe
+     * ----------------------------------------------------- */
+    const ssPhotoswipe = function () {
         const items = [],
-              $pswp = $('.pswp')[0],
-              $folioItems = $('.folio-item');
+            $pswp = $('.pswp')[0],
+            $folioItems = $('.folio-item');
 
         // get items
-        $folioItems.each( function(i) {
+        $folioItems.each(function (i) {
 
             let $folio = $(this),
-                $thumbLink =  $folio.find('.folio-item__thumb-link'),
+                $thumbLink = $folio.find('.folio-item__thumb-link'),
                 $title = $folio.find('.folio-item__title'),
                 $caption = $folio.find('.folio-item__caption'),
                 $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
                 $captionText = $.trim($caption.html()),
                 $href = $thumbLink.attr('href'),
                 $size = $thumbLink.data('size').split('x'),
-                $width  = $size[0],
+                $width = $size[0],
                 $height = $size[1];
-        
+
             let item = {
-                src  : $href,
-                w    : $width,
-                h    : $height
+                src: $href,
+                w: $width,
+                h: $height
             }
 
             if ($caption.length > 0) {
@@ -165,9 +165,9 @@
         });
 
         // bind click event
-        $folioItems.each(function(i) {
+        $folioItems.each(function (i) {
 
-            $(this).find('.folio-item__thumb-link').on('click', function(e) {
+            $(this).find('.folio-item__thumb-link').on('click', function (e) {
                 e.preventDefault();
                 let options = {
                     index: i,
@@ -184,9 +184,9 @@
 
 
 
-   /* slick slider
-    * ------------------------------------------------------ */
-    const ssSlickSlider = function() {
+    /* slick slider
+     * ------------------------------------------------------ */
+    const ssSlickSlider = function () {
 
         $('.clients').slick({
             arrows: false,
@@ -243,11 +243,11 @@
     };
 
 
-   /* animate on scroll
-    * ------------------------------------------------------ */
-    const ssAOS = function() {
-        
-        AOS.init( {
+    /* animate on scroll
+     * ------------------------------------------------------ */
+    const ssAOS = function () {
+
+        AOS.init({
             offset: 100,
             duration: 600,
             easing: 'ease-in-out',
@@ -260,25 +260,25 @@
 
 
 
-   /* alert boxes
-    * ------------------------------------------------------ */
-    const ssAlertBoxes = function() {
+    /* alert boxes
+     * ------------------------------------------------------ */
+    const ssAlertBoxes = function () {
 
-        $('.alert-box').on('click', '.alert-box__close', function() {
+        $('.alert-box').on('click', '.alert-box__close', function () {
             $(this).parent().fadeOut(500);
-        }); 
+        });
 
     };
 
-    
-   /* smooth scrolling
-    * ------------------------------------------------------ */
-    const ssSmoothScroll = function() {
-        
+
+    /* smooth scrolling
+     * ------------------------------------------------------ */
+    const ssSmoothScroll = function () {
+
         $('.smoothscroll').on('click', function (e) {
             const target = this.hash;
             const $target = $(target);
-            
+
             e.preventDefault();
             e.stopPropagation();
 
@@ -292,19 +292,19 @@
     };
 
 
-   /* back to top
-    * ------------------------------------------------------ */
-    const ssBackToTop = function() {
-        
+    /* back to top
+     * ------------------------------------------------------ */
+    const ssBackToTop = function () {
+
         const pxShow = 800;
         const $goTopButton = $(".ss-go-top")
 
         // Show or hide the button
         if ($(window).scrollTop() >= pxShow) $goTopButton.addClass('link-is-visible');
 
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             if ($(window).scrollTop() >= pxShow) {
-                if(!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
+                if (!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
             } else {
                 $goTopButton.removeClass('link-is-visible')
             }
@@ -313,8 +313,8 @@
 
 
 
-   /* initialize
-    * ------------------------------------------------------ */
+    /* initialize
+     * ------------------------------------------------------ */
     (function ssInit() {
 
         ssPreloader();
@@ -338,68 +338,68 @@
 function fitElementToParent(el, padding) {
     var timeout = null;
     function resize() {
-      if (timeout) clearTimeout(timeout);
-      anime.set(el, {scale: 1});
-      var pad = padding || 0;
-      var parentEl = el.parentNode;
-      var elOffsetWidth = el.offsetWidth - pad;
-      var parentOffsetWidth = parentEl.offsetWidth;
-      var ratio = parentOffsetWidth / elOffsetWidth;
-      timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
+        if (timeout) clearTimeout(timeout);
+        anime.set(el, { scale: 1 });
+        var pad = padding || 0;
+        var parentEl = el.parentNode;
+        var elOffsetWidth = el.offsetWidth - pad;
+        var parentOffsetWidth = parentEl.offsetWidth;
+        var ratio = parentOffsetWidth / elOffsetWidth;
+        timeout = setTimeout(anime.set(el, { scale: ratio }), 10);
     }
     resize();
     window.addEventListener('resize', resize);
-  }
-  
-  var sphereAnimation = (function() {
-  
+}
+
+var sphereAnimation = (function () {
+
     var sphereEl = document.querySelector('.sphere-animation');
     var spherePathEls = sphereEl.querySelectorAll('.sphere path');
     var pathLength = spherePathEls.length;
     var hasStarted = false;
     var aimations = [];
-  
+
     fitElementToParent(sphereEl);
-  
+
     var breathAnimation = anime({
-      begin: function() {
-        for (var i = 0; i < pathLength; i++) {
-          aimations.push(anime({
-            targets: spherePathEls[i],
-            stroke: {value: ['rgba(9, 251, 211, 1)', 'rgba(80,80,80,.35)'], duration: 500},
-            translateX: [2, -4],
-            translateY: [2, -4],
-            easing: 'easeOutQuad',
-            autoplay: false
-          }));
-        }
-      },
-      update: function(ins) {
-        aimations.forEach(function(animation, i) {
-          var percent = (1 - Math.sin((i * .35) + (.0022 * ins.currentTime))) / 2;
-          animation.seek(animation.duration * percent);
-        });
-      },
-      duration: Infinity,
-      autoplay: false
+        begin: function () {
+            for (var i = 0; i < pathLength; i++) {
+                aimations.push(anime({
+                    targets: spherePathEls[i],
+                    stroke: { value: ['rgba(9, 251, 211, 1)', 'rgba(80,80,80,.35)'], duration: 500 },
+                    translateX: [2, -4],
+                    translateY: [2, -4],
+                    easing: 'easeOutQuad',
+                    autoplay: false
+                }));
+            }
+        },
+        update: function (ins) {
+            aimations.forEach(function (animation, i) {
+                var percent = (1 - Math.sin((i * .35) + (.0022 * ins.currentTime))) / 2;
+                animation.seek(animation.duration * percent);
+            });
+        },
+        duration: Infinity,
+        autoplay: false
     });
-  
+
     var introAnimation = anime.timeline({
-      autoplay: false
+        autoplay: false
     })
-    .add({
-      targets: spherePathEls,
-      strokeDashoffset: {
-        value: [anime.setDashoffset, 0],
-        duration: 3900,
-        easing: 'easeInOutCirc',
-        delay: anime.stagger(190, {direction: 'reverse'})
-      },
-      duration: 2000,
-      delay: anime.stagger(60, {direction: 'reverse'}),
-      easing: 'linear'
-    }, 0);
-  
+        .add({
+            targets: spherePathEls,
+            strokeDashoffset: {
+                value: [anime.setDashoffset, 0],
+                duration: 3900,
+                easing: 'easeInOutCirc',
+                delay: anime.stagger(190, { direction: 'reverse' })
+            },
+            duration: 2000,
+            delay: anime.stagger(60, { direction: 'reverse' }),
+            easing: 'linear'
+        }, 0);
+
     var shadowAnimation = anime({
         targets: '#sphereGradient',
         x1: '25%',
@@ -409,17 +409,17 @@ function fitElementToParent(el, padding) {
         duration: 30000,
         easing: 'easeOutQuint',
         autoplay: false
-      }, 0);
-  
+    }, 0);
+
     function init() {
-      introAnimation.play();
-      breathAnimation.play();
-      shadowAnimation.play();
+        introAnimation.play();
+        breathAnimation.play();
+        shadowAnimation.play();
     }
-    
+
     init();
-  
-  })();
+
+})();
 
 //  Circular Mouse Curosr
 const cursor = document.querySelector('#cursor');
@@ -428,21 +428,21 @@ let pos = { x: 0, y: 0 };
 const speed = 0.1; // between 0 and 1
 
 const updatePosition = () => {
-  pos.x += (mouse.x - pos.x) * speed;
-  pos.y += (mouse.y - pos.y) * speed;
-  cursor.style.transform = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
+    pos.x += (mouse.x - pos.x) * speed;
+    pos.y += (mouse.y - pos.y) * speed;
+    cursor.style.transform = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
 };
 
 const updateCoordinates = e => {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
 }
 
 window.addEventListener('mousemove', updateCoordinates);
 
 function loop() {
-  updatePosition();
-  requestAnimationFrame(loop);
+    updatePosition();
+    requestAnimationFrame(loop);
 }
 
 requestAnimationFrame(loop);
