@@ -124,3 +124,7 @@ header {
   .page-cover-image{
     border-radius: 10px;
   }
+
+  .padding-left{
+    padding-left: 10px;
+  }
