@@ -43,7 +43,7 @@ function getIP(json) {
 
 			case "South Africa":
 				pricingStarter = "R1500",
-					pricingStandard = "R2800",
+					pricingStandard = "R3500",
 					pricingPremium = "R6000+"
 				break;
 
