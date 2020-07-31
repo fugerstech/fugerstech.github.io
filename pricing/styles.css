@@ -186,3 +186,59 @@ header {
     transform: translate(0, -0px);
   }
 }
+
+
+
+/* Adding Tooltips In The Pricing Table */
+
+
+
+:root {
+  --tooltipColor: #1a1a1a;
+  --tooltipTransform: translate(-50%, -5px);
+  --tooltipTransition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  background: var(--tooltipColor);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: var(--tooltipTransform);
+          transform: var(--tooltipTransform);
+  padding: 7px 10px;
+  border-radius: 3px;
+  opacity: 0;
+  font-size: 0.925em;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #fff;
+  -webkit-transition: var(--tooltipTransition);
+  transition: var(--tooltipTransition);
+}
+[data-tooltip]:after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - 5px);
+  left: 50%;
+  -webkit-transform: var(--tooltipTransform);
+          transform: var(--tooltipTransform);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: var(--tooltipColor) transparent transparent transparent;
+  -webkit-transition: var(--tooltipTransition);
+  transition: var(--tooltipTransition);
+}
+[data-tooltip]:hover, [data-tooltip]:focus {
+  --tooltipTransform: translate(-50%, -10px);
+}
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after {
+  opacity: 1;
+}
