@@ -136,3 +136,10 @@ header {
       font-size: x-large;
     }
   }
+
+  /* Bottom Round Border In The Header */
+
+  header{
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
