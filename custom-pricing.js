@@ -10,7 +10,7 @@ function getIP(json) {
 					pricingStandard = "₹12500",
 					pricingPremium = "₹18000",
 					document.getElementById('custom_location').textContent = "Mohali India",
-					document.getElementById('custom_phone').textContent = "+91 7986766591"
+					document.getElementById('custom_phone').innerHTML = '<a href="tel:+917986766591">+91 7986766591</a>'
 				break;
 
 			case "United Kingdom":
