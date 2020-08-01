@@ -1,9 +1,14 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    --nc-bg-1: #14171b;
-    --nc-lk-1: #c2d4e8;
-    --nc-lk-2: #eee;
-  }
+:root {
+	--nc-tx-1: #ffffff;
+	--nc-tx-2: #eeeeee;
+	--nc-bg-1: #14171b;
+	--nc-bg-2: #111111;
+	--nc-bg-3: #222222;
+	--nc-lk-1: #c2cdda;
+	--nc-lk-2: #ecf0f3;
+	--nc-lk-tx: #FFFFFF;
+	--nc-ac-1: #7928CA;
+	--nc-ac-tx: #FFFFFF;
 }
 
 body {
@@ -68,7 +73,7 @@ header {
 /* Little Animation Pink Gallery On The Pricing Page */
 
 .animation {
-  background-color: #14171b;
+  /* background-color: #14171b; */
   font-size: 10px;
   overflow: hidden;
   display: -webkit-box;
