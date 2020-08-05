@@ -4315,7 +4315,7 @@ html.no-csstransitions .s-hero__content {
   * # about
   *
   * ------------------------------------------------------------------- */
-.s-about {
+  .s-about {
     background-color: var(--color-bg);
     padding-top: calc(7 * var(--space));
     padding-bottom: 0;
