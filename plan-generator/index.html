@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fugers Plans Generator</title>
+
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="favicon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h4>Fugers Generate Custom Plans</h4>
+        <h1> <a href="https://fugers.tech" target="_blank">Fugers</a></h1>
+    </header>
+    <main>
+
+        <label for="name">Enter the name</label>
+        <input required type="text" name="Name" autocomplete="name" placeholder="Full Name" id="name" minlength="3"
+            maxlength="50">
+
+        <br>
+
+        <label for="amount">Enter the amount</label>
+        <input required type="text" name="Amount" autocomplete="100" placeholder="$ Currency" id="amount" minlength="1"
+            maxlength="16">
+
+        <br>
+
+        <Button id="submitBtn">Generate</Button>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <details>
+            <summary>Usage!</summary>
+            <ul>
+                <li>Enter the name in the Name field</li>
+                <li>Enter the currency in this format: <kbd>Currency Sign + Amount</kbd></li>
+                <li>Click Generate to download the PDF</li>
+            </ul>
+        </details>
+
+
+        <blockquote><i>Simple Plan Generator For Fugers. <a target="_blank"
+                    href="https://fugers.tech/contact">Get Your Site Now!</a></i></blockquote>
+
+    </main>
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
