@@ -74,9 +74,11 @@ const generatePDF = async (name, amount) => {
   const pdfBytes = await pdfDoc.save();
   console.log("Done creating");
 
+  let fileName = "Fugers Website Development Plan " + userName.value;
+
   var file = new File(
     [pdfBytes],
-    "Fugers Website Development Plan.pdf",
+    fileName,
     {
       type: "application/pdf;charset=utf-8",
     }
