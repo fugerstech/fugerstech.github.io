@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fugers Plans Generator</title>
+    <title>Fugers: Plans Generator</title>
 
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <h4>Fugers Generate Custom Plans</h4>
+        <h4>Fugers: Custom Plans Generator</h4>
         <h1> <a href="https://fugers.tech" target="_blank">Fugers</a></h1>
     </header>
     <main>
@@ -21,11 +21,25 @@
         <label for="name">Enter the name</label>
         <input required type="text" name="Name" autocomplete="name" placeholder="Full Name" id="name" minlength="3"
             maxlength="50">
+        <br>
 
+        <label for="money">Choose a currency:</label>
+        <select name="money" id="money">
+            <option value="pound">£ Pound</option>
+            <option value="rands">R Rands</option>
+            <option value="rupee">₹ Rupee</option>
+            <option value="usd">$ USD</option>
+        </select>
         <br>
 
         <label for="amount">Enter the amount</label>
-        <input required type="text" name="Amount" autocomplete="100" placeholder="$ Currency" id="amount" minlength="1"
+        <input required type="number" name="Amount" autocomplete="100" placeholder="Amount" id="amount" minlength="1"
+            maxlength="16">
+
+        <br>
+
+        <label for="discountPer">Discount percentage</label>
+        <input required type="number" name="Discount" autocomplete="15" placeholder="Discount" id="discount" minlength="1"
             maxlength="16">
 
         <br>
@@ -37,19 +51,20 @@
         <br>
         <br>
 
-
         <details>
             <summary>Usage!</summary>
             <ul>
-                <li>Enter the name in the Name field</li>
-                <li>Enter the currency in this format: <kbd>Currency Sign + Amount</kbd></li>
+                <li>Enter the name of the client in the <em>Name Field</em></li>
+                <li>Enter the currency<kbd>for the final amount currency sign</kbd></li>
+                <li>Enter the <strong>final amount</strong></li>
+                <li>Give a Discount of choice <kbd>it won't affect the final amount</kbd></li>
                 <li>Click Generate to download the PDF</li>
             </ul>
         </details>
 
 
-        <blockquote><i>Simple Plan Generator For Fugers. <a target="_blank"
-                    href="https://fugers.tech/contact">Get Your Site Now!</a></i></blockquote>
+        <blockquote><i>Simple Plan Generator For Fugers. <a target="_blank" href="https://fugers.tech/contact">Get Your
+                    Site Now!</a></i></blockquote>
 
     </main>
     <script src="https://unpkg.com/pdf-lib@1.4.0"></script>

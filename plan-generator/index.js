@@ -1,7 +1,11 @@
 // Name Input Field
 const userName = document.getElementById("name");
-// Name Price Field
+// Money Price Field
 const userAmount = document.getElementById("amount");
+// Discount Field
+const userDiscount = document.getElementById("discount");
+// Currency
+const userCurrency = document.getElementById("money");
 // Button
 const submitBtn = document.getElementById("submitBtn");
 
@@ -16,17 +20,19 @@ const capitalize = (str, lower = false) =>
 submitBtn.addEventListener("click", () => {
   const val = capitalize(userName.value);
   const cost = userAmount.value;
+  const currency = userCurrency.value;
+  const discount = userDiscount.value;
 
   //check if the text is empty or not
   if (val.trim() !== "" && userName.checkValidity()) {
     // console.log(val);
-    generatePDF(val, cost);
+    generatePDF(val, cost, currency, discount);
   } else {
     userName.reportValidity();
   }
 });
 
-const generatePDF = async (name, amount) => {
+const generatePDF = async (name, amount, currency, discount) => {
   const existingPdfBytes = await fetch("./fugersplan.pdf").then((res) =>
     res.arrayBuffer()
   );
@@ -55,14 +61,44 @@ const generatePDF = async (name, amount) => {
     font: Inter,
   });
 
-  firstPage.drawText(amount, {
+  let finalAmount = ""
+  let beforeDiscount = (amount/100)*discount;
+  beforeDiscount += parseInt(amount);
+
+  switch (currency) {
+    case "pound":
+      finalAmount = "£" + amount;
+      beforeDiscount = "£" + beforeDiscount;
+      break;
+    case "usd":
+      finalAmount = "$" + amount;
+      beforeDiscount = "$" + beforeDiscount;
+      break;
+    case "rupee":
+      finalAmount = "₹" + amount;
+      beforeDiscount = "₹" + beforeDiscount;
+      break;
+    case "rands":
+      finalAmount = "R" + amount;
+      beforeDiscount = "R" + beforeDiscount;
+      break;
+  }
+
+  firstPage.drawText(finalAmount, {
     x: 497,
     y: 280,
     size: 8.8,
     font: Inter,
   });
 
-  firstPage.drawText(amount, {
+  firstPage.drawText(beforeDiscount.toString(), {
+    x: 410,
+    y: 280,
+    size: 8.8,
+    font: Inter,
+  });
+
+  firstPage.drawText(finalAmount, {
     x: 480,
     y: 130,
     size: 20,
