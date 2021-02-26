@@ -6,7 +6,7 @@ function getIP(json) {
 
 		switch (json.country) {
 			case "India":
-				pricingStarter = "₹5000",
+				pricingStarter = "₹7500",
 					pricingStandard = "₹12000",
 					pricingPremium = "₹18000"
 				break;
